@@ -14,101 +14,104 @@
     <a href="#main" class="skip-link">Skip to Main Content</a>
 
     <!-- Header with Navigation -->
-    <header>
-        <nav>
-            <h1>Noonie's Picks</h1>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav aria-label="Main Navigation">
+        <h1>Noonie's Picks</h1>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Hero/Intro Section - OUTSIDE MAIN -->
-    <section class="hero">
-        <h2 class="hero-title">Noonie's Picks</h2>
-        <p class="hero-subtitle">A curated collection of Metro Detroit's best matcha cafés thoughtfully reviewed so you can spend your time (and money) at places that truly deliver.</p>
-    </section>
+    <!-- Hero/Intro Section -->
+<section class="hero" aria-labelledby="hero-title">
+    <h2 class="hero-title" id="hero-title">Noonie's Picks</h2>
+    <p class="hero-subtitle">A curated collection of Metro Detroit's best matcha cafés thoughtfully reviewed so you can spend your time (and money) at places that truly deliver.</p>
+</section>
 
-    <!-- Main Content - EVERYTHING BELOW GOES INSIDE -->
+    <!-- Main Content -->
     <main id="main">
         
         <!-- Filter Section -->
-        <section class="filters" aria-label="Cafe Filters">
-            <h2>Filter Cafes</h2>
-            
-            <div class="filter-container">
-                <!-- Location Filter -->
-                <div class="filter-group">
-                    <select id="location-filter" class="filter-dropdown" data-category="location">
-                        <option value="all">All Locations</option>
-                        <option value="ann-arbor">Ann Arbor</option>
-                        <option value="bloomfield-hills">Bloomfield Hills</option>
-                        <option value="detroit">Detroit</option>
-                        <option value="farmington-hills">Farmington Hills</option>
-                        <option value="troy">Troy</option>
-                    </select>
-                </div>
+<section class="filters" aria-label="Cafe Filters">
+    <h2>Filter Cafes</h2>
+    
+    <div class="filter-container">
+        <!-- Location Filter -->
+        <div class="filter-group">
+            <label for="location-filter">Location</label>
+            <select id="location-filter" class="filter-dropdown" data-category="location">
+                <option value="all">All Locations</option>
+                <option value="ann-arbor">Ann Arbor</option>
+                <option value="bloomfield-hills">Bloomfield Hills</option>
+                <option value="detroit">Detroit</option>
+                <option value="farmington-hills">Farmington Hills</option>
+                <option value="troy">Troy</option>
+            </select>
+        </div>
 
-                <!-- Vibe Filter -->
-                <div class="filter-group">
-                    <select id="vibe-filter" class="filter-dropdown" data-category="vibe">
-                        <option value="all">All Vibes</option>
-                        <option value="aesthetic">Aesthetic</option>
-                        <option value="artsy">Artsy</option>
-                        <option value="authentic">Authentic</option>
-                        <option value="cozy">Cozy</option>
-                        <option value="grab-and-go">Grab & Go</option>
-                        <option value="specialty-drinks">Specialty Drinks</option>
-                        <option value="study-friendly">Study-Friendly</option>
-                        <option value="trendy">Trendy</option>
-                    </select>
-                </div>
+        <!-- Vibe Filter -->
+        <div class="filter-group">
+            <label for="vibe-filter">Vibe</label>
+            <select id="vibe-filter" class="filter-dropdown" data-category="vibe">
+                <option value="all">All Vibes</option>
+                <option value="artsy">Artsy</option>
+                <option value="authentic">Authentic</option>
+                <option value="cozy">Cozy</option>
+                <option value="grab-and-go">Grab & Go</option>
+                <option value="grab-and-go">Speciality-Drinks</option>
+                <option value="study-friendly">Study-Friendly</option>
+                <option value="trendy">Trendy</option>
+            </select>
+        </div>
 
-                <!-- Price Filter -->
-                <div class="filter-group">
-                    <select id="price-filter" class="filter-dropdown" data-category="price">
-                        <option value="all">All Prices</option>
-                        <option value="budget">$ Budget</option>
-                        <option value="moderate">$$ Moderate</option>
-                        <option value="upscale">$$$ Upscale</option>
-                    </select>
-                </div>
-            </div>
+        <!-- Price Filter -->
+        <div class="filter-group">
+            <label for="price-filter">Price Range</label>
+            <select id="price-filter" class="filter-dropdown" data-category="price">
+                <option value="all">All Prices</option>
+                <option value="budget">$ Budget</option>
+                <option value="moderate">$$ Moderate</option>
+                <option value="upscale">$$$ Upscale</option>
+            </select>
+        </div>
+    </div>
 
-            <!-- Results announcement for screen readers -->
-            <div class="sr-only" aria-live="polite" aria-atomic="true" id="filter-results"></div>
-        </section>
+    <!-- Results announcement for screen readers -->
+    <div class="sr-only" aria-live="polite" aria-atomic="true" id="filter-results"></div>
+</section>
 
         <!-- Cafe Cards Grid -->
+
         <section class="cafe-grid" aria-label="Cafe Results">
             <!-- Cafe Card 1 -->
-            <article class="cafe-card" data-location="bloomfield-hills" data-vibe="grab-and-go" data-price="upscale">
+            <article class="cafe-card" data-location="bloomfield-hills" data-vibe="grab-and-go trendy" data-price="moderate">
                 <img src="images/hudsonsplace.png" alt="Exterior of Hudson's Place cafe with sign">
                 <div class="cafe-info">
                     <h3>Hudson's Place</h3>
                     <p class="location">📍 Bloomfield Hills, MI</p>
-                    <p class="price">Price: $$$</p>
+                    <p class="price">Price: $$</p>
                     <p class="vibe-tags">
                         <span class="tag">Grab & Go</span>
-                        <span class="tag">Aesthetic</span>
+                        <span class="tag">Trendy</span>
                     </p>
                     <p class="description">A charming café-pizzeria hybrid known for its artisanal pizzas, smooth matcha, and warm neighborhood vibe. Great for quick stops or a catch up with friends.</p>
                     <a href="https://www.hudsonsplacepizzeria.com/" target="_blank" rel="noopener noreferrer" class="cafe-link">Visit Website</a>
                 </div>
             </article>
 
-            <!-- Cafe Card 2 -->
-            <article class="cafe-card" data-location="troy" data-vibe="trendy" data-price="moderate">
+           <!-- Cafe Card 2 -->
+            <article class="cafe-card" data-location="troy" data-vibe="trendy authentic speciality-drinks" data-price="budget">
                 <img src="images/matchamaiko.png" alt="Modern minimalist Matcha Cafe Maiko with white walls and artistic decor">
                 <div class="cafe-info">
                     <h3>Matcha Cafe Maiko</h3>
                     <p class="location">📍 Troy, MI</p>
-                    <p class="price">Price: $$</p>
+                    <p class="price">Price: $</p>
                     <p class="vibe-tags">
-                        <span class="tag">Trendy</span>
-                        <span class="tag">Specialty Drinks</span>
                         <span class="tag">Authentic</span>
+                        <span class="tag">Speciality-Drinks</span>
+                        <span class="tag">Trendy</span>
                     </p>
                     <p class="description">A true matcha spot offering ceremonial-grade matcha from Uji, Japan. Perfect for studying or indulging in their signature matcha soft-serve.</p>
                     <a href="https://www.matchacafe-maiko.com/eng/store/index.html?country=usa&region=mi&target=mi-troy#store-breakdown" target="_blank" rel="noopener noreferrer" class="cafe-link">Visit Website</a>
@@ -116,14 +119,13 @@
             </article>
 
             <!-- Cafe Card 3 -->
-            <article class="cafe-card" data-location="ann-arbor" data-vibe="grab-and-go" data-price="upscale">
+            <article class="cafe-card" data-location="ann-arbor" data-vibe="grab-and-go authentic" data-price="upscale">
                 <img src="images/unitea.png" alt="Unitea cafe interior">
                 <div class="cafe-info">
-                    <h3>Unietea</h3>
+                    <h3>Unitea</h3>
                     <p class="location">📍 Ann Arbor, MI</p>
                     <p class="price">Price: $$$</p>
                     <p class="vibe-tags">
-                        <span class="tag">Trendy</span>
                         <span class="tag">Authentic</span>
                         <span class="tag">Grab & Go</span>
                     </p>
@@ -133,12 +135,12 @@
             </article>
 
             <!-- Cafe Card 4 -->
-            <article class="cafe-card" data-location="farmington-hills" data-vibe="cozy" data-price="moderate">
+            <article class="cafe-card" data-location="farmington-hills" data-vibe="cozy study-friendly" data-price="budget">
                 <img src="images/apothecary.png" alt="Apothecary cafe interior">
                 <div class="cafe-info">
                     <h3>Apothecary</h3>
                     <p class="location">📍 Farmington Hills, MI</p>
-                    <p class="price">Price: $$</p>
+                    <p class="price">Price: $</p>
                     <p class="vibe-tags">
                         <span class="tag">Cozy</span>
                         <span class="tag">Study-Friendly</span>
@@ -149,7 +151,7 @@
             </article>
 
             <!-- Cafe Card 5 -->
-            <article class="cafe-card" data-location="detroit" data-vibe="artsy" data-price="moderate">
+            <article class="cafe-card" data-location="detroit" data-vibe="artsy trendy" data-price="moderate">
                 <img src="images/sirencafe.png" alt="Siren Cafe interior">
                 <div class="cafe-info">
                     <h3>Siren Cafe</h3>
@@ -165,28 +167,60 @@
             </article>
 
             <!-- Cafe Card 6 -->
-            <article class="cafe-card" data-location="ann-arbor" data-vibe="study-friendly" data-price="moderate">
-                <img src="images/hazelcoffeeco.png" alt="Hazel Coffee Co interior">
+            <article class="cafe-card" data-location="ann-arbor" data-vibe="study-friendly cozy" data-price="budget">
+                <img src="images/hazelcoffeeco.png" alt="Hazel Coffee Co">
                 <div class="cafe-info">
                     <h3>Hazel Coffee Co</h3>
                     <p class="location">📍 Ann Arbor, MI</p>
-                    <p class="price">Price: $$</p>
+                    <p class="price">Price: $</p>
                     <p class="vibe-tags">
-                        <span class="tag">Study-Friendly</span>
-                        <span class="tag">Trendy</span>
                         <span class="tag">Cozy</span>
+                        <span class="tag">Study-Friendly</span>
                     </p>
                     <p class="description">A newly opened Ann Arbor café with a clean, minimalist vibe and a focus on high-quality coffee and matcha. With a bright, modern interior, it's great for a quick stop or a quiet moment with a well-made drink.</p>
                     <a href="https://www.hazelcoffee.co/" target="_blank" rel="noopener noreferrer" class="cafe-link">Visit Website</a>
+                </div>
+            </article>
+
+            <!-- Cafe Card 7 -->
+            <article class="cafe-card" data-location="Ann Arbor Detroit" data-vibe="artsy trendy" data-price="upscale">
+                <img src="images/smlwrld.png" alt="Sml Wrld Cafe Pop Up">
+                <div class="cafe-info">
+                    <h3>Sml Wrld Cafe</h3>
+                    <p class="location">📍 Ann Arbor, MI 📍 Detroit, MI </p>
+                    <p class="price">Price: $$$</p>
+                    <p class="vibe-tags">
+                        <span class="tag">Artsy</span>
+                        <span class="tag">Trendy</span>
+                    </p>
+                    <p class="description">A rotating pop-up café known for its creative matcha drinks, experimental flavors, and artsy, community-centered vibe. A fun spot to try limited-time drinks and support local creators.</p>
+                    <a href="https://www.instagram.com/smlwrldcafe/?hl=en" target="_blank" rel="noopener noreferrer" class="cafe-link">Visit Website</a>
+                </div>
+            </article>
+
+            <!-- Cafe Card 8 -->
+            <article class="cafe-card" data-location="Ypsilanti" data-vibe="cozy speciality-drinks study-friendly" data-price="upscale">
+                <img src="images/alezroastery.png" alt="Alez Roasery Exterior">
+                <div class="cafe-info">
+                    <h3>Alez Roastery</h3>
+                    <p class="location">📍 Ypsilanti, MI </p>
+                    <p class="price">Price: $$$</p>
+                    <p class="vibe-tags">
+                        <span class="tag">Cozy</span>
+                        <span class="tag">Speciality-Drinks</span>
+                        <span class="tag">Study-Friendly</span>
+                    </p>
+                    <p class="description">A locally loved roastery in Ypsilanti known for its fresh small-batch coffee, smooth matcha, and welcoming neighborhood feel. It's a simple, no-frills spot with quality drinks and a warm community vibe.</p>
+                    <a href="https://www.instagram.com/alez_roastery/" target="_blank" rel="noopener noreferrer" class="cafe-link">Visit Website</a>
                 </div>
             </article>
         </section>
 
         <!-- Disclaimer -->
         <section class="disclaimer">
-            <p><strong>Note:</strong> Cafe information is current as of December 2024. Please check individual cafe websites for the latest hours, menu items, and pricing.</p>
+            <p><strong>Note:</strong> Cafe information is current as of December 2025. Please check individual cafe websites for the latest hours, menu items, and pricing.</p>
         </section>
-        
+
     </main>
 
     <!-- Footer -->
