@@ -181,7 +181,7 @@ nav a.active {
     font-family: "new-kansas-extra-swash", sans-serif;
     font-weight: 600;
     font-style: italic;
-    font-size: 2rem;  /* Mobile: 48px */
+    font-size: 2.5rem;  /* Mobile: 48px */
     color: #132a13;
     margin-bottom: 0 auto;
     letter-spacing: 1px;
@@ -191,7 +191,7 @@ nav a.active {
 }
 
 .hero-subtitle {
-    font-size: 1rem;
+    font-size: .8rem;
     color: #385638;
     max-width: 800px;
     margin: 0 auto;
